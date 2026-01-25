@@ -1,0 +1,56 @@
+{
+  "silent_certificate_version": "1.0",
+  "certificate_id": "sc_20260125T123137Z_82e7d05c",
+  "created_at_utc": "2026-01-25T12:31:37Z",
+  "created_by": {
+    "actor_type": "human"
+  },
+  "trigger": {
+    "trigger_type": "manual"
+  },
+  "scope": {
+    "provider": "aws",
+    "domain": "iam",
+    "region": "global",
+    "resources_included": [
+      "iam:users",
+      "iam:roles",
+      "iam:policies"
+    ],
+    "resources_excluded": [
+      "secrets",
+      "payloads",
+      "content_bodies"
+    ]
+  },
+  "collection": {
+    "read_only": true,
+    "collector": {
+      "name": "silent",
+      "version": "0.1.0"
+    },
+    "collection_started_at_utc": "2026-01-25T12:31:37Z",
+    "collection_finished_at_utc": "2026-01-25T12:31:37Z"
+  },
+  "data": {
+    "format": "normalized_json",
+    "canonicalization": "sorted_keys_utf8_no_whitespace",
+    "sha256": "39db6d612a8eea4f709e7e44dc1fb467e6cedcd624b6d07ea243b99027bcca0d",
+    "size_bytes": 46
+  },
+  "disclaimer": {
+    "statement": "This certificate represents what was observable at the time of capture. No assessment, approval, or guarantee is implied.",
+    "intentionally_omits": [
+      "risk_assessment",
+      "recommendations",
+      "compliance_judgment",
+      "future_guarantees",
+      "continuous_monitoring",
+      "alerts_or_notifications"
+    ]
+  },
+  "signature": {
+    "method": "none",
+    "note": "Optional: cryptographic signing may be added by the consuming system without changing the meaning of this certificate."
+  }
+}
