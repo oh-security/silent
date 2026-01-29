@@ -2,11 +2,11 @@
 
 **SILENT is a prepared silence.**
 
-SILENT does not detect, assess, or recommend.
+SILENT does not detect, assess, or recommend.  
 It does not judge risk, security, or compliance.
 
-SILENT records what was observable,
-at a specific moment in time.
+SILENT preserves what was observable by an organization  
+at a specific moment in time — and nothing more.
 
 It exists for when something happens.
 
@@ -16,13 +16,13 @@ It exists for when something happens.
 
 SILENT is a state snapshot tool.
 
-It preserves what was observable by an organization
+It preserves what was observable by an organization  
 at a specific moment in time, and nothing more.
 
-SILENT creates a single, immutable record that represents
+SILENT creates a single, immutable record that represents  
 the limit of awareness at that moment.
 
-It is designed to exist quietly,
+It is designed to exist quietly,  
 until it is needed.
 
 ---
@@ -51,7 +51,7 @@ SILENT is **not**:
 - A compliance product
 - A decision engine
 
-If SILENT appears to do any of the above,
+If SILENT appears to do any of the above,  
 it is no longer SILENT.
 
 ---
@@ -64,18 +64,18 @@ More often, it is:
 
 > What did you know at that time?
 
-Logs and configuration histories provide facts.
+Logs and configuration histories provide facts.  
 They show what existed.
 
 SILENT exists to preserve something different:
 
 **what was observable.**
 
-It captures the boundary between
-what could be seen
+It captures the boundary between  
+what could be seen  
 and what could not.
 
-SILENT does not attempt to fill that gap.
+SILENT does not attempt to fill that gap.  
 It records it.
 
 ---
@@ -85,49 +85,49 @@ It records it.
 SILENT operates with a deliberately minimal flow.
 
 1. A capture is manually triggered.
-2. SILENT accesses the target environment in read-only mode.
+2. SILENT operates on a user-defined snapshot of the target scope.
 3. The observable state is normalized and cryptographically hashed.
 4. A single certificate is generated and stored.
 
-There are no background processes.
-There is no continuous execution.
+There are no background processes.  
+There is no continuous execution.  
 There are no automated decisions.
 
 Each capture stands alone.
 
-SILENT does not compare states,
-track changes over time,
+SILENT does not compare states,  
+track changes over time,  
 or interpret what it records.
 
-It simply preserves
-what was observable,
+It simply preserves  
+what was observable,  
 when it was observable.
 
 ---
 
 ## Design Principles
 
-SILENT is governed by the following principles.
-They are not implementation details.
+SILENT is governed by the following principles.  
+They are not implementation details.  
 They are constraints.
 
 ### Prepared Silence
 
-SILENT prepares to say nothing,
+SILENT prepares to say nothing,  
 until something happens.
 
-It does not attempt to prevent incidents,
+It does not attempt to prevent incidents,  
 only to remain accurate when they are questioned.
 
 ---
 
 ### Non-Binding by Design
 
-SILENT does not create approval,
-endorsement,
+SILENT does not create approval,  
+endorsement,  
 or obligation.
 
-Its records are descriptive,
+Its records are descriptive,  
 not prescriptive.
 
 No action is implied by the existence of a certificate.
@@ -136,11 +136,11 @@ No action is implied by the existence of a certificate.
 
 ### Failure-Resistant
 
-SILENT cannot fail silently,
+SILENT cannot fail silently,  
 because it does not promise to act.
 
-There are no alerts to miss,
-no scores to misinterpret,
+There are no alerts to miss,  
+no scores to misinterpret,  
 and no recommendations to follow.
 
 Absence of a record is also a valid outcome.
@@ -149,25 +149,25 @@ Absence of a record is also a valid outcome.
 
 ### Minimal Surface Area
 
-SILENT intentionally minimizes
-features,
-configuration,
+SILENT intentionally minimizes  
+features,  
+configuration,  
 and scope.
 
-A smaller surface reduces
-misinterpretation,
-misuse,
+A smaller surface reduces  
+misinterpretation,  
+misuse,  
 and unintended responsibility.
 
 ---
 
 ### Founder-Independent
 
-SILENT is designed to remain valid
-without ongoing explanation.
+SILENT is designed to remain valid  
+without ongoing interpretation.
 
-Its meaning is fixed by design,
-not by interpretation.
+Its meaning is fixed by design,  
+not by explanation.
 
-If SILENT requires clarification,
+If SILENT requires ongoing interpretation,  
 it has already failed.
