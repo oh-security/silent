@@ -84,24 +84,23 @@ It records it.
 
 SILENT operates with a deliberately minimal flow.
 
-1. A capture is manually triggered.
-2. SILENT operates on a user-defined snapshot of the target scope.
-3. The observable state is normalized and cryptographically hashed.
-4. A single certificate is generated and stored.
+- A capture is manually triggered.
+- SILENT uses a user-defined snapshot of the target scope.
+- A single certificate is generated and stored.
 
 There are no background processes.  
 There is no continuous execution.  
-There are no automated decisions.
+There are no automated decisions.  
+There is no external system connection.
 
 Each capture stands alone.
 
-SILENT does not compare states,  
-track changes over time,  
+SILENT does not compare states, track changes over time,  
 or interpret what it records.
 
-It simply preserves  
-what was observable,  
-when it was observable.
+It simply preserves what was observable, when it was observable.
+
+SILENT proves scope, not reality.
 
 ---
 
