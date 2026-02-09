@@ -10,6 +10,8 @@ at a specific moment in time — and nothing more.
 
 It exists for when something happens.
 
+SILENT is a responsibility boundary certificate: it proves what the platform claimed to cover at that time.
+
 ---
 
 ## What SILENT Is
@@ -101,6 +103,28 @@ or interpret what it records.
 It simply preserves what was observable, when it was observable.
 
 SILENT proves scope, not reality.
+
+---
+
+## Optional: Asset Inventory Reference (CMDB)
+
+SILENT does not integrate with CMDB systems.
+
+However, the certificate may optionally include an `asset_id`
+(and an `inventory_url`) provided by the consuming system,
+so the record can be traced back during incident reviews and audits.
+
+Example:
+
+```json
+"asset": {
+  "asset_id": "CMDB-12345",
+  "inventory_url": "https://..."
+}
+```
+
+This does not change the meaning of SILENT.
+It only makes the certificate easier to reference in real workflows.
 
 ---
 
