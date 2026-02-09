@@ -23,6 +23,10 @@
       "content_bodies"
     ]
   },
+  "asset": {
+    "asset_id": "CMDB-12345",
+    "inventory_url": "https://..."
+  },
   "collection": {
     "read_only": true,
     "collector": {
