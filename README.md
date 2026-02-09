@@ -10,7 +10,7 @@ at a specific moment in time — and nothing more.
 
 It exists for when something happens.
 
-SILENT is a responsibility boundary certificate: it proves what the platform claimed to cover at that time.
+SILENT is a responsibility boundary certificate: it records what the platform claimed to cover at that time.
 
 ---
 
@@ -18,10 +18,7 @@ SILENT is a responsibility boundary certificate: it proves what the platform cla
 
 SILENT is a state snapshot tool.
 
-It preserves what was observable by an organization  
-at a specific moment in time, and nothing more.
-
-SILENT creates a single, immutable record that represents  
+It creates a single, immutable record that represents  
 the limit of awareness at that moment.
 
 It is designed to exist quietly,  
