@@ -133,24 +133,6 @@ python -m pip install -U pip
 python -m pip install pynacl
 ```
 
-### Generate keys (one time)
-```powershell
-python tools\gen_keys.py
-```
-### Generate certificate (unsigned)
-```powershell
-python silent.py
-```
-### Generate certificate + signature (one command)
-```powershell
-python silent.py --sign
-```
-### Verify signature
-```powershell
-python tools\verify_signature.py
-```
-
-
 ---
 
 ## Optional: Asset Inventory Reference (CMDB)
