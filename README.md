@@ -130,16 +130,26 @@ It only provides **tamper-evidence** (detects modification after issuance).
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -U pip
-python -m pip install pynacl```
+python -m pip install pynacl
+```
 
-Generate certificate (unsigned)
+### Generate keys (one time)
+```powershell
+python tools\gen_keys.py
+```
+### Generate certificate (unsigned)
+```powershell
 python silent.py
-
-Generate certificate + signature (one command)
+```
+### Generate certificate + signature (one command)
+```powershell
 python silent.py --sign
-
-Verify signature
+```
+### Verify signature
+```powershell
 python tools\verify_signature.py
+```
+
 
 ---
 
