@@ -106,6 +106,8 @@ It simply preserves what was observable, when it was observable.
 
 SILENT proves scope, not reality.
 
+---
+
 ## Optional Signing (Ed25519 Detached Signature)
 
 SILENT supports an **optional**, detached Ed25519 signature for `certificate.json`.
