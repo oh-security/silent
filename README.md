@@ -130,7 +130,7 @@ It only provides **tamper-evidence** (detects modification after issuance).
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -U pip
-python -m pip install pynacl
+python -m pip install pynacl```
 
 Generate certificate (unsigned)
 python silent.py
