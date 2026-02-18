@@ -1,10 +1,12 @@
 import argparse
+import base64
 import hashlib
 import json
 import os
 import uuid
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any, Dict, Optional, Tuple
 
 
@@ -186,10 +188,69 @@ def write_json(path: str, obj: Dict[str, Any]) -> None:
         json.dump(obj, f, ensure_ascii=False, indent=2)
 
 
+# -----------------------------
+# Optional Signing (Ed25519 detached)
+# -----------------------------
+def sig_path_for(cert_path: str) -> str:
+    p = Path(cert_path)
+    if p.suffix.lower() == ".json":
+        return str(p.with_suffix(".sig.json"))
+    return str(p) + ".sig.json"
+
+
+def sign_certificate_detached(
+    cert_json_path: str,
+    sk_b64_path: str = "keys/silent_ed25519_sk.b64",
+    out_sig_path: Optional[str] = None,
+) -> str:
+    """
+    Creates detached signature JSON for the *canonical JSON* of certificate.json.
+    Returns the signature file path.
+    """
+    try:
+        from nacl.signing import SigningKey
+    except Exception:
+        raise SystemExit("PyNaCl not installed. Run: python -m pip install pynacl")
+
+    cert_p = Path(cert_json_path)
+    if not cert_p.exists():
+        raise SystemExit(f"certificate not found: {cert_json_path}")
+
+    sk_p = Path(sk_b64_path)
+    if not sk_p.exists():
+        raise SystemExit(f"private key not found: {sk_b64_path} (run tools/gen_keys.py first)")
+
+    # Load & canonicalize the certificate JSON (not the pretty-printed bytes on disk)
+    cert_obj = json.loads(cert_p.read_text(encoding="utf-8"))
+    cert_bytes, _ = canonicalize_json(cert_obj)
+
+    sk_b64 = sk_p.read_text(encoding="utf-8").strip()
+    sk = SigningKey(base64.b64decode(sk_b64))
+
+    signature = sk.sign(cert_bytes).signature
+    sig_b64 = base64.b64encode(signature).decode("ascii")
+
+    key_id = "ed25519:" + hashlib.sha256(sk.verify_key.encode()).hexdigest()[:16]
+
+    sig_doc = {
+        "silent_signature_version": "1.0",
+        "algorithm": "ed25519",
+        "canonicalization": "json(sort_keys=true,separators=(',',':'),utf8)",
+        "signed_artifact": str(cert_p.name),
+        "certificate_sha256": sha256_hex(cert_bytes),
+        "signature_b64": sig_b64,
+        "key_id": key_id,
+    }
+
+    sig_out = Path(out_sig_path) if out_sig_path else Path(sig_path_for(cert_json_path))
+    sig_out.write_text(json.dumps(sig_doc, indent=2) + "\n", encoding="utf-8")
+    return str(sig_out)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         prog="silent",
-        description="SILENT — a prepared silence. Generates a non-binding certificate of what was observable.",
+        description="SILENT 窶・a prepared silence. Generates a non-binding certificate of what was observable.",
     )
     parser.add_argument("--account-id", default=None, help="AWS account id (optional).")
     parser.add_argument("--actor-id", default=None, help="Actor id (optional).")
@@ -200,6 +261,13 @@ def main() -> None:
         "--write-payload",
         action="store_true",
         help="Also write the normalized payload to payload.normalized.json (debug only; not recommended).",
+    )
+
+    # NEW: optional signing
+    parser.add_argument(
+        "--sign",
+        action="store_true",
+        help="Optionally create a detached Ed25519 signature (certificate.sig.json). Requires keys/silent_ed25519_sk.b64",
     )
 
     args = parser.parse_args()
@@ -232,6 +300,11 @@ def main() -> None:
         write_json("payload.normalized.json", normalized_state)
 
     print(f"{cfg.out_json_path} created")
+
+    # Optional: sign the written certificate
+    if args.sign:
+        sig_out = sign_certificate_detached(cfg.out_json_path)
+        print(f"{sig_out} created")
 
 
 if __name__ == "__main__":
