@@ -38,8 +38,6 @@ python tools\verify_signature.py
 
 ---
 
----
-
 ## What SILENT Is Not
 
 SILENT intentionally does **not**:
