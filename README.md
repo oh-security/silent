@@ -136,7 +136,7 @@ python -m pip install pynacl
 ### Generate keys (one time)
 ```powershell
 python tools\gen_keys.py
-
+```
 
 ---
 
