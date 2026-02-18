@@ -1,0 +1,7 @@
+# Python
+.venv/
+
+# SILENT signing keys
+keys/
+!keys/silent_ed25519_pk.b64
+keys/silent_ed25519_sk.b64

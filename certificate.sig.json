@@ -1,0 +1,9 @@
+{
+  "silent_signature_version": "1.0",
+  "algorithm": "ed25519",
+  "canonicalization": "json(sort_keys=true,separators=(',',':'),utf8)",
+  "signed_artifact": "certificate.json",
+  "certificate_sha256": "ac58db98be618e4a2652c93695e7548b9db34fbd0d3aa09898251a22e461c36d",
+  "signature_b64": "AJYxk3Ef6RoCncbAZpeYotYWgBcJqWE/sd/za4vQiO3BoB/ZE/HduCjyH9is+mKQB7sTxkCDRqCMmFeW2OTfBw==",
+  "key_id": "ed25519:afe1d9a4026a0e86"
+}
