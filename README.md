@@ -110,7 +110,8 @@ SILENT proves scope, not reality.
 
 SILENT supports an **optional**, detached Ed25519 signature for `certificate.json`.
 
-This signature is **not a guarantee** and does not change the meaning of the certificate.
+This signature is **not a guarantee** and does not change the meaning of the certificate.  
+
 It only provides **tamper-evidence** (detects modification after issuance).
 
 ### Design Principles
