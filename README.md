@@ -133,6 +133,12 @@ python -m pip install -U pip
 python -m pip install pynacl
 ```
 
+**### Generate keys (one time)
+```powershell
+python tools\gen_keys.py
+```
+
+
 ---
 
 ## Optional: Asset Inventory Reference (CMDB)
