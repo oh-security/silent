@@ -24,6 +24,20 @@ the limit of awareness at that moment.
 It is designed to exist quietly,  
 until it is needed.
 
+## Quick Start
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -U pip
+python -m pip install pynacl
+python tools\gen_keys.py
+python silent.py --sign
+python tools\verify_signature.py
+```
+
+---
+
 ---
 
 ## What SILENT Is Not
@@ -121,6 +135,7 @@ It only provides **tamper-evidence** (detects modification after issuance).
 - The private key is **never** committed to GitHub
 - GitHub contains the **public key only**
 - The signature provides tamper-evidence, not correctness or approval
+- The private key is **stored locally only** and never shared
 
 ### Files
 - `certificate.json` — the certificate
