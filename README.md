@@ -106,6 +106,41 @@ It simply preserves what was observable, when it was observable.
 
 SILENT proves scope, not reality.
 
+## Optional Signing (Ed25519 Detached Signature)
+
+SILENT supports an **optional**, detached Ed25519 signature for `certificate.json`.
+
+This signature is **not a guarantee** and does not change the meaning of the certificate.
+It only provides **tamper-evidence** (detects modification after issuance).
+
+### Design Principles
+- Signing is **optional** (consumers may ignore it)
+- The private key is **never** committed to GitHub
+- GitHub contains the **public key only**
+- The signature provides tamper-evidence, not correctness or approval
+
+### Files
+- `certificate.json` — the certificate
+- `certificate.sig.json` — detached signature metadata
+- `keys/silent_ed25519_pk.b64` — public key (OK to commit)
+- `keys/silent_ed25519_sk.b64` — private key (**DO NOT COMMIT**)
+
+### Setup (Windows / PowerShell)
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -U pip
+python -m pip install pynacl
+
+Generate certificate (unsigned)
+python silent.py
+
+Generate certificate + signature (one command)
+python silent.py --sign
+
+Verify signature
+python tools\verify_signature.py
+
 ---
 
 ## Optional: Asset Inventory Reference (CMDB)
