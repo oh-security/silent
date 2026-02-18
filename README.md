@@ -26,6 +26,8 @@ until it is needed.
 
 ## Quick Start
 
+> Note: `python tools\gen_keys.py` is required only once per machine.
+
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -93,7 +95,6 @@ It records it.
 
 As security platforms start relying more on AI for triage and automated decisions, it becomes harder to explain—after the fact—what the platform was actually responsible for. SILENT keeps a simple, immutable record of what was in scope (and what was explicitly out of scope) at a point in time, so incident reviews and audits stay defensible as systems become more autonomous.
 
-
 ---
 
 ## How SILENT Works
@@ -117,6 +118,22 @@ or interpret what it records.
 It simply preserves what was observable, when it was observable.
 
 SILENT proves scope, not reality.
+
+---
+
+## Intended Integration
+
+SILENT is designed to sit upstream of incident response, audit, and security workflow systems.
+
+It produces a non-binding certificate that can be attached to:
+- incident tickets
+- audit evidence packages
+- change review records
+- post-incident review documents
+
+SILENT does not execute remediation, enforce policy, or generate alerts.
+
+Execution and remediation remain entirely outside SILENT.
 
 ---
 
