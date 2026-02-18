@@ -77,6 +77,10 @@ and what could not.
 SILENT does not attempt to fill that gap.  
 It records it.
 
+### Why now (AI and autonomous systems)
+
+As security platforms increasingly incorporate AI-driven triage and automated decision-making, the boundary of “what the platform was responsible for” becomes harder to explain after the fact. SILENT provides a simple, immutable record of what was in scope (and what was explicitly out of scope) at a point in time. This helps incident reviews and audits stay defensible even as systems become more autonomous.
+
 ---
 
 ## How SILENT Works
