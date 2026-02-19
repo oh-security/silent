@@ -28,6 +28,7 @@ until it is needed.
 
 > Note: `python tools\gen_keys.py` is required only once per machine. If you already have keys, skip it.
 
+
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
