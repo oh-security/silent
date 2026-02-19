@@ -26,7 +26,7 @@ until it is needed.
 
 ## Quick Start
 
-> Note: `python tools\gen_keys.py` is required only once per machine.
+> Note: `python tools\gen_keys.py` is required only once per machine. If you already have keys, skip it.
 
 ```powershell
 python -m venv .venv
@@ -37,7 +37,6 @@ python tools\gen_keys.py
 python silent.py --sign
 python tools\verify_signature.py
 ```
-
 
 ---
 
