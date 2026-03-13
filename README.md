@@ -6,6 +6,8 @@ SILENT records what a system said it was responsible for observing at a specific
 
 When incidents occur, SILENT shows what the system claimed responsibility for at that time.
 
+---
+
 **SILENT is a prepared silence.**
 
 SILENT does not detect, assess, or recommend.  
