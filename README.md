@@ -24,7 +24,7 @@ SILENT is a responsibility boundary certificate: it records what the platform cl
 
 ## What SILENT Is
 
-SILENT is a state snapshot tool.
+SILENT is a responsibility boundary certificate.
 
 It creates a single, immutable record that represents  
 the limit of awareness at that moment.
