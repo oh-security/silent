@@ -195,7 +195,6 @@ python silent.py --sign
 python tools\verify_signature.py
 ```
 
-
 ---
 
 ## Optional: Asset Inventory Reference (CMDB)
