@@ -26,26 +26,11 @@ SILENT is a responsibility boundary certificate: it records what the platform cl
 
 SILENT is a responsibility boundary certificate.
 
-It creates a single, immutable record that represents  
-the limit of awareness at that moment.
+It creates a single immutable certificate that records
+what a system declared it was responsible for observing at that moment.
 
 It is designed to exist quietly,  
 until it is needed.
-
-## Quick Start
-
-> Note: `python tools\gen_keys.py` is required only once per machine. If you already have keys, skip it.
-
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -U pip
-python -m pip install pynacl
-python tools\gen_keys.py
-python silent.py --sign
-python tools\verify_signature.py
-```
 
 ---
 
@@ -127,6 +112,23 @@ or interpret what it records.
 It simply preserves what was observable, when it was observable.
 
 SILENT proves scope, not reality.
+
+---
+
+## Quick Start
+
+> Note: `python tools\gen_keys.py` is required only once per machine. If you already have keys, skip it.
+
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -U pip
+python -m pip install pynacl
+python tools\gen_keys.py
+python silent.py --sign
+python tools\verify_signature.py
+```
 
 ---
 
