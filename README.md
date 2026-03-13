@@ -148,7 +148,7 @@ Execution and remediation remain entirely outside SILENT.
 
 ---
 
-## Optional Signing (Ed25519 Detached Signature)
+## Optional Cryptographic Signing
 
 SILENT supports an **optional**, detached Ed25519 signature for `certificate.json`.
 
