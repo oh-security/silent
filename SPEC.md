@@ -22,7 +22,7 @@ Defines the declared observation boundary.
 
 Example:
 
-scope.provider
-scope.domain
-scope.resources_included
-scope.resources_excluded
+- scope.provider
+- scope.domain
+- scope.resources_included
+- scope.resources_excluded
