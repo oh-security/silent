@@ -26,3 +26,27 @@ Example:
 - scope.domain
 - scope.resources_included
 - scope.resources_excluded
+
+
+---
+
+## Design Principles
+
+Certificates must be:
+
+- immutable
+- self-contained
+- non-binding
+- descriptive
+
+Certificates describe what a system **declared**, not what actually occurred.
+
+---
+
+## Optional Signing
+
+Certificates may include an optional Ed25519 detached signature.
+
+The signature provides tamper evidence only.
+
+It does not guarantee correctness.
