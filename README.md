@@ -121,3 +121,46 @@ SILENT proves scope, not reality.
   }
 }
 ```
+This certificate records what the system declared it was responsible for observing at that moment.
+
+---
+
+## What SILENT Is Not
+
+SILENT intentionally does **not**:
+
+- Detect vulnerabilities
+- Assess risk or severity
+- Judge security posture
+- Judge compliance
+- Recommend actions
+- Apply fixes
+- Monitor continuously
+- Alert or notify
+- Score or rank environments
+- Provide guarantees of safety
+
+SILENT is **not**:
+
+- A security scanner
+- A monitoring system
+- An observability platform
+- A dashboard
+- An alerting tool
+- A compliance product
+- A decision engine
+
+---
+
+## Intended Integration
+
+SILENT is designed to sit upstream of:
+-incident response
+-audit documentation
+-governance workflows
+-change reviews
+Certificates may be attached to:
+-incident tickets
+-audit evidence
+-post-incident reviews
+SILENT does not execute remediation or enforce policy.
