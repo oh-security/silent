@@ -180,8 +180,7 @@ It does not validate correctness or security.
 ---
 
 ## Philosophy
-See PHILOSOPHY.md
- for the design philosophy.
+See PHILOSOPHY.md for the design philosophy behind SILENT.
 
 ---
 
