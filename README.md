@@ -84,20 +84,14 @@ python tools\verify_signature.py
 ## How SILENT Works
 
 SILENT operates with a deliberately minimal flow.
-
-A capture is manually triggered
-
-A scope definition is provided
-
-A certificate is generated and stored
+1. A capture is manually triggered
+2.A scope definition is provided
+3.A certificate is generated and stored
 
 There are:
-
-no background processes
-
-no continuous monitoring
-
-no automated decisions
+- no background processes
+- no continuous monitoring
+- no automated decisions
 
 Each certificate stands alone.
 
