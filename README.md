@@ -81,7 +81,7 @@ python tools\verify_signature.py
 
 ---
 
-How SILENT Works
+## How SILENT Works
 
 SILENT operates with a deliberately minimal flow.
 
