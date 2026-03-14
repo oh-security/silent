@@ -5,11 +5,11 @@ SILENT exists to preserve one thing:
 **what a system declared it was responsible for observing at a specific moment in time.**
 
 It does not interpret that declaration.  
-It simply records it.
+It records it.
 
-SILENT does not attempt to determine what actually happened.
+SILENT does not determine what happened.
 
-Instead, it preserves the **declared responsibility boundary** that existed at that moment.
+It preserves the **declared responsibility boundary** that existed at that moment.
 
 ---
 
@@ -20,7 +20,7 @@ until something happens.
 
 It does not attempt to prevent incidents.
 
-Its purpose is to remain accurate when events are questioned later.
+Its role begins when events are questioned later.
 
 When incidents occur, the question often becomes:
 
@@ -38,10 +38,10 @@ They record what a system declared it was responsible for observing.
 
 They do **not**:
 
-- approve configurations  
-- validate security posture  
-- guarantee correctness  
-- create obligations  
+- approve configurations
+- validate security posture
+- guarantee correctness
+- create obligations
 
 A certificate is a record of a declared boundary, not a judgement.
 
