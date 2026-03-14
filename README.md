@@ -155,12 +155,12 @@ SILENT is **not**:
 ## Intended Integration
 
 SILENT is designed to sit upstream of:
--incident response
--audit documentation
--governance workflows
--change reviews
+- incident response
+- audit documentation
+- governance workflows
+- change reviews
 Certificates may be attached to:
--incident tickets
--audit evidence
--post-incident reviews
+- incident tickets
+- audit evidence
+- post-incident reviews
 SILENT does not execute remediation or enforce policy.
