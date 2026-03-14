@@ -179,11 +179,7 @@ It does not validate correctness or security.
 
 ---
 
-## Philosophy
-See [PHILOSOPHY.md](./PHILOSOPHY.md) for the design philosophy behind SILENT.
+## Documentation
 
----
-
-## Specification
-See SPEC.md
- for the certificate format specification.
+- [Philosophy](PHILOSOPHY.md)
+- [Specification](SPEC.md)
