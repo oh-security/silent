@@ -179,18 +179,7 @@ It does not validate correctness or security.
 
 ---
 
----
+## Documentation
 
-## Philosophy
-
-SILENT follows a specific design philosophy.
-
-See **[PHILOSOPHY.md](./PHILOSOPHY.md)** for details.
-
----
-
-## Specification
-
-The certificate format and structure are documented in:
-
-**[SPEC.md](./SPEC.md)**
+- [Philosophy](./PHILOSOPHY.md)
+- [Specification](./SPEC.md)
