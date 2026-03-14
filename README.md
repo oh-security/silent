@@ -159,7 +159,6 @@ SILENT is designed to sit upstream of:
 - audit documentation
 - governance workflows
 - change reviews
-  
 Certificates may be attached to:
 - incident tickets
 - audit evidence
