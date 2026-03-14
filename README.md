@@ -101,6 +101,7 @@ SILENT proves scope, not reality.
 
 ## Certificate Example
 
+```json
 {
   "silent_certificate_version": "1.0",
   "created_at_utc": "2026-01-25T12:31:37Z",
@@ -119,3 +120,4 @@ SILENT proves scope, not reality.
     ]
   }
 }
+```
