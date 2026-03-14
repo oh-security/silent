@@ -91,6 +91,50 @@ As security platforms start relying more on AI for triage and automated decision
 
 ---
 
+## Example
+
+A security platform says it is responsible for observing:
+
+- IAM users
+- IAM roles
+- IAM policies
+
+It does not observe:
+
+- application data
+- external services
+- secrets outside its scope
+
+SILENT records this declared responsibility boundary at that moment.
+
+If an incident occurs later, the certificate shows what the platform said it was responsible for observing at that time.
+
+
+### Intuitive Example
+
+A company signs a contract with a security provider.
+
+The contract states:
+
+"We are responsible for monitoring the cloud infrastructure."
+
+It also states that the provider is **not responsible** for:
+
+- application code  
+- external services  
+- systems outside the agreed scope  
+
+Months later, an incident occurs.
+
+The first question becomes:
+
+*What was the provider responsible for at that time?*
+
+SILENT records that declared boundary when it was stated,  
+so the answer does not change later.
+
+---
+
 ## How SILENT Works
 
 SILENT operates with a deliberately minimal flow.
