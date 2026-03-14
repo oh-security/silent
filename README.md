@@ -77,6 +77,7 @@ python -m pip install pynacl
 python tools\gen_keys.py
 python silent.py --sign
 python tools\verify_signature.py
+```
 
 ---
 
