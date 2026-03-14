@@ -84,6 +84,7 @@ python tools\verify_signature.py
 ## How SILENT Works
 
 SILENT operates with a deliberately minimal flow.
+
 1. A capture is manually triggered
 2. A scope definition is provided
 3. A certificate is generated and stored
@@ -165,6 +166,7 @@ Certificates may be attached to:
 - incident tickets
 - audit evidence
 - post-incident reviews
+
 SILENT does not execute remediation or enforce policy.
 
 ---
