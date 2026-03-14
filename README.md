@@ -8,15 +8,25 @@ When incidents occur, SILENT shows what the system claimed responsibility for at
 
 ---
 
+## SILENT in 30 seconds
+
+1. A system declares what it is responsible for observing.
+2. SILENT records that declared boundary.
+3. If an incident occurs later, the certificate shows what the system said it was responsible for at that time.
+
+SILENT records **declared responsibility boundaries**, not system reality.
+
+---
+
 ## What SILENT Is
 
 SILENT creates a **responsibility boundary certificate**.
 
 It records what a system declared it was responsible for observing at a specific moment.
 
-SILENT does not determine what actually happened.
+SILENT does not determine what happened.
 
-It records **what the system said it was responsible for observing at that time.**
+It records **what the system declared it was responsible for observing at that time.**
 
 ---
 
