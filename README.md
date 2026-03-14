@@ -166,3 +166,25 @@ Certificates may be attached to:
 - audit evidence
 - post-incident reviews
 SILENT does not execute remediation or enforce policy.
+
+---
+
+## Optional Signing
+
+SILENT supports optional Ed25519 detached signatures for certificates.
+
+Signing provides tamper evidence only.
+
+It does not validate correctness or security.
+
+---
+
+## Philosophy
+See PHILOSOPHY.md
+ for the design philosophy.
+
+---
+
+## Specification
+See SPEC.md
+ for the certificate format specification.
