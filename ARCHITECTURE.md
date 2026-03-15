@@ -130,4 +130,11 @@ It does not answer:
 - whether the system was secure
 - what action should be taken next
 
+---
 
+## Relationship to Other Documents
+
+- README.md explains what SILENT is and how to use it
+- SPEC.md defines the certificate format
+- PHILOSOPHY.md explains the design philosophy
+- ARCHITECTURE.md explains how the system is structurally organized
