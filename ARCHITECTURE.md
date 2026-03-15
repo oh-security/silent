@@ -20,8 +20,8 @@ optional signature
 stored record
 ```
 
-SILENT does not monitor continuously.
-It does not connect to external systems.
+SILENT does not monitor continuously.  
+It does not connect to external systems.  
 It does not interpret what it records.
 
 It simply turns a declared observation boundary into a durable certificate.
@@ -45,22 +45,27 @@ Examples may include:
 
 SILENT does not validate whether the scope is correct.
 
-It records the declared boundary as provided.
+It records the declared boundary exactly as provided.
+
+---
 
 ### 2. Certificate Generation
 
 SILENT generates a single certificate file:
 
-- certificate.json
+- `certificate.json`
 
 This certificate contains the declared responsibility boundary at a specific moment in time.
 
 The certificate is:
+
 - point-in-time
 - immutable in intent
 - descriptive, not prescriptive
 
 It does not contain analysis, judgement, or recommendations.
+
+---
 
 ### 3. Optional Signing
 
@@ -68,16 +73,18 @@ SILENT may optionally generate a detached Ed25519 signature for the certificate.
 
 Files:
 
-- certificate.json
-- certificate.sig.json
+- `certificate.json`
+- `certificate.sig.json`
 
-The signature provides **tamper evidence only.**
+The signature provides **tamper evidence only**.
 
 It does not:
 
-- validate correctnes
+- validate correctness
 - approve the certificate
 - guarantee security
+
+---
 
 ### 4. Storage and Use
 
@@ -95,8 +102,6 @@ It produces a record that other systems may consume.
 ---
 
 ## Architectural Constraints
-
-Architectural Constraints
 
 SILENT is intentionally constrained.
 
@@ -121,9 +126,9 @@ They preserve the narrow role of SILENT:
 
 SILENT produces a certificate that answers one question:
 
-What did the system declare it was responsible for observing at that time?
+> What did the system declare it was responsible for observing at that time?
 
-It does not answer:
+It does **not** answer:
 
 - what actually happened
 - whether the declaration was correct
@@ -134,7 +139,7 @@ It does not answer:
 
 ## Relationship to Other Documents
 
-- README.md explains what SILENT is and how to use it
-- SPEC.md defines the certificate format
-- PHILOSOPHY.md explains the design philosophy
-- ARCHITECTURE.md explains how the system is structurally organized
+- `README.md` explains what SILENT is and how to use it
+- `SPEC.md` defines the certificate format
+- `PHILOSOPHY.md` explains the design philosophy
+- `ARCHITECTURE.md` explains how the system is structurally organized
