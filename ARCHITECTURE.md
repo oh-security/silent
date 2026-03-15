@@ -30,7 +30,7 @@ It simply turns a declared observation boundary into a durable certificate.
 
 ## Core Components
 
-**1. Scope Definition**
+## 1. Scope Definition
 
 The process begins with a user-defined scope.
 
@@ -47,7 +47,7 @@ SILENT does not validate whether the scope is correct.
 
 It records the declared boundary as provided.
 
-**2. Certificate Generation**
+## 2. Certificate Generation
 
 SILENT generates a single certificate file:
 
@@ -62,7 +62,7 @@ The certificate is:
 
 It does not contain analysis, judgement, or recommendations.
 
-**3. Optional Signing**
+## 3. Optional Signing
 
 SILENT may optionally generate a detached Ed25519 signature for the certificate.
 
