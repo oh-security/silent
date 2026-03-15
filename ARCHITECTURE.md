@@ -30,7 +30,7 @@ It simply turns a declared observation boundary into a durable certificate.
 
 ## Core Components
 
-# 1. Scope Definition
+### 1. Scope Definition
 
 The process begins with a user-defined scope.
 
