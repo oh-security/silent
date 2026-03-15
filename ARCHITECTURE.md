@@ -47,7 +47,7 @@ SILENT does not validate whether the scope is correct.
 
 It records the declared boundary as provided.
 
-## 2. Certificate Generation
+### 2. Certificate Generation
 
 SILENT generates a single certificate file:
 
@@ -62,7 +62,7 @@ The certificate is:
 
 It does not contain analysis, judgement, or recommendations.
 
-## 3. Optional Signing
+### 3. Optional Signing
 
 SILENT may optionally generate a detached Ed25519 signature for the certificate.
 
@@ -78,3 +78,56 @@ It does not:
 - validate correctnes
 - approve the certificate
 - guarantee security
+
+### 4. Storage and Use
+
+The generated certificate can be stored and attached to downstream systems such as:
+
+- incident records
+- audit evidence
+- change review documentation
+- post-incident review packages
+
+SILENT itself does not perform workflow orchestration.
+
+It produces a record that other systems may consume.
+
+---
+
+## Architectural Constraints
+
+Architectural Constraints
+
+SILENT is intentionally constrained.
+
+It has:
+
+- no continuous monitoring
+- no alerting
+- no scoring
+- no policy enforcement
+- no automated remediation
+- no external dependency requirement
+
+These constraints are part of the architecture, not missing features.
+
+They preserve the narrow role of SILENT:
+
+**recording a declared responsibility boundary without interpreting it.**
+
+---
+
+## What SILENT Produces
+
+SILENT produces a certificate that answers one question:
+
+What did the system declare it was responsible for observing at that time?
+
+It does not answer:
+
+- what actually happened
+- whether the declaration was correct
+- whether the system was secure
+- what action should be taken next
+
+
