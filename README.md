@@ -309,3 +309,9 @@ SILENT intentionally minimizes functionality to reduce interpretation and uninte
 ### Founder Independent
 
 SILENT must remain understandable without its creator.
+
+---
+
+A full certificate example is available in:
+
+`examples/certificate_example.json`
