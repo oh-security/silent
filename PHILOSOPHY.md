@@ -11,6 +11,8 @@ SILENT does not determine what happened.
 
 It preserves the **declared responsibility boundary** that existed at that moment.
 
+SILENT records **scope**, not reality.
+
 ---
 
 ## Prepared Silence
@@ -49,8 +51,6 @@ A certificate is a record of a declared boundary, not a judgement.
 
 ## Scope, Not Reality
 
-SILENT records **scope**, not reality.
-
 Logs and monitoring systems record what happened.
 
 SILENT records something different:
@@ -66,13 +66,13 @@ not the events that occurred within it.
 
 SILENT intentionally minimizes functionality.
 
-Additional features increase:
+Additional features introduce:
 
 - interpretation
 - implied guarantees
 - unintended responsibility
 
-By limiting scope, SILENT reduces misuse and misinterpretation.
+By limiting scope, SILENT preserves the clarity of the responsibility boundary it records.
 
 ---
 
