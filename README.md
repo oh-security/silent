@@ -2,13 +2,20 @@
 
 **Keep the line of responsibility.**
 
-SILENT records what a system said it was responsible for observing at a specific moment in time.
+Responsibility boundary certificates for systems.
 
-When incidents occur, SILENT shows what the system claimed responsibility for at that time.
+SILENT records what a system declared it was responsible for observing at a specific moment in time.
+
+Logs record events.  
+Configuration history records system state.
+
+**SILENT records responsibility boundaries.**
+
+SILENT proves scope, not reality.
 
 ---
 
-## SILENT in 30 seconds
+# SILENT in 30 seconds
 
 1. A system declares what it is responsible for observing.
 2. SILENT records that declared boundary.
@@ -18,80 +25,96 @@ SILENT records **declared responsibility boundaries**, not system reality.
 
 ---
 
-## What SILENT Is
+# What SILENT Does
 
-SILENT creates a **responsibility boundary certificate**.
+SILENT generates a single **immutable certificate** describing:
 
-It records what a system declared it was responsible for observing at a specific moment.
+- what a system claimed it was responsible for observing
+- what was explicitly outside that responsibility
+- when that responsibility boundary was declared
 
-SILENT does not determine what happened.
+The certificate preserves the **declared observation boundary** that existed at that moment in time.
 
-It records **what the system declared it was responsible for observing at that time.**
+This record can later be referenced during:
+
+- incident investigations
+- security reviews
+- audits
+- compliance evidence collection
 
 ---
 
-## Example
+# Example
 
-A security platform says it is responsible for observing:
+A security platform declares that it observes:
 
 - IAM users  
 - IAM roles  
 - IAM policies  
 
-It does not observe:
+It explicitly does **not** observe:
 
 - application data  
 - external services  
 - secrets outside its scope  
 
-SILENT records this declared responsibility boundary at that moment.
+SILENT records this declared responsibility boundary.
 
-If an incident occurs later, the certificate shows what the platform said it was responsible for observing at that time.
+If an incident occurs later, the certificate shows **what the platform said it was responsible for observing at that time.**
 
 ---
 
-### Intuitive Example
+# Intuitive Example
 
 A company signs a contract with a security provider.
 
 The contract states:
 
-"We are responsible for monitoring the cloud infrastructure."
+> We are responsible for monitoring the cloud infrastructure.
 
-It also states that the provider is **not responsible** for:
+It explicitly excludes:
 
 - application code  
 - external services  
 - systems outside the agreed scope  
 
-Months later, an incident occurs.
+Months later an incident occurs.
 
-The first question becomes:
+The investigation asks:
 
-*What was the provider responsible for at that time?*
+> What was the provider responsible for at that time?
 
-SILENT records that declared boundary when it was stated,  
-so the answer does not change later.
-
----
-
-## Quick Start
-
-> `python tools\gen_keys.py` is required only once per machine.
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -U pip
-python -m pip install pynacl
-python tools\gen_keys.py
-python silent.py --sign
-python tools\verify_signature.py
-```
+SILENT preserves that declared boundary when it was stated so the answer cannot change later.
 
 ---
 
-## How SILENT Works
+# Where SILENT Fits
+
+Modern systems already record many things:
+
+| System Type | Records |
+|-------------|--------|
+| Logs | what happened |
+| Configuration history | what existed |
+| Monitoring | what changed |
+| Security tools | what might be risky |
+| **SILENT** | what the system claimed responsibility for observing |
+
+SILENT does not replace security or observability systems.
+
+It records something different:
+
+**declared responsibility boundaries.**
+
+These certificates can later be referenced during:
+
+- incident investigations
+- audit reviews
+- compliance evidence collection
+
+---
+
+# How SILENT Works
 
 SILENT operates with a deliberately minimal flow.
 
@@ -99,18 +122,20 @@ SILENT operates with a deliberately minimal flow.
 2. A scope definition is provided
 3. A certificate is generated and stored
 
+Each certificate is independent.
+
 There are:
+
 - no background processes
 - no continuous monitoring
 - no automated decisions
+- no external system dependencies
 
-Each certificate stands alone.
-
-SILENT proves scope, not reality.
+SILENT simply records the **declared observation boundary at that moment in time.**
 
 ---
 
-## Certificate Example
+# Certificate Example
 
 ```json
 {
@@ -132,62 +157,6 @@ SILENT proves scope, not reality.
   }
 }
 ```
-This certificate records what the system declared it was responsible for observing at that moment.
-
----
-
-## What SILENT Is Not
-
-SILENT intentionally does **not**:
-
-- Detect vulnerabilities
-- Assess risk or severity
-- Judge security posture
-- Judge compliance
-- Recommend actions
-- Apply fixes
-- Monitor continuously
-- Alert or notify
-- Score or rank environments
-- Provide guarantees of safety
-
-SILENT is **not**:
-
-- A security scanner
-- A monitoring system
-- An observability platform
-- A dashboard
-- An alerting tool
-- A compliance product
-- A decision engine
-
----
-
-## Intended Integration
-
-SILENT is designed to sit upstream of:
-- incident response
-- audit documentation
-- governance workflows
-- change reviews
-  
-Certificates may be attached to:
-
-- incident tickets
-- audit evidence
-- post-incident reviews
-
-SILENT does not execute remediation or enforce policy.
-
----
-
-## Optional Signing
-
-SILENT supports optional Ed25519 detached signatures for certificates.
-
-Signing provides tamper evidence only.
-
-It does not validate correctness or security.
 
 ---
 
@@ -195,3 +164,4 @@ It does not validate correctness or security.
 
 - [Philosophy](./PHILOSOPHY.md)
 - [Specification](./SPEC.md)
+- [Architecture](./ARCHITECTURE.md)
