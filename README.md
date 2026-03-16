@@ -4,14 +4,14 @@
 
 Responsibility boundary certificates for systems.
 
-SILENT records what a system declared it was responsible for observing at a specific moment in time.
+SILENT records what a system **declared it was responsible for observing** at a specific moment in time.
 
 Logs record events.  
 Configuration history records system state.
 
 **SILENT records responsibility boundaries.**
 
-SILENT proves scope, not reality.
+SILENT proves **scope, not reality.**
 
 ---
 
@@ -41,6 +41,30 @@ This record can later be referenced during:
 - security reviews
 - audits
 - compliance evidence collection
+
+---
+
+# Use Cases
+
+SILENT is useful wherever systems declare responsibility boundaries.
+
+Common scenarios include:
+
+- **Incident investigations**  
+  Determine what a platform claimed it was responsible for observing when an incident occurred.
+
+- **Security reviews**  
+  Understand what monitoring or detection scope existed at a specific moment.
+
+- **Audit evidence**  
+  Provide a verifiable record of declared responsibility boundaries.
+
+- **Compliance documentation**  
+  Preserve what was considered in scope during governance or security processes.
+
+SILENT does not determine whether the declaration was correct.
+
+It records that the declaration existed.
 
 ---
 
@@ -102,7 +126,7 @@ Modern systems already record many things:
 
 SILENT does not replace security or observability systems.
 
-It records something different:
+Instead, it records a different dimension:
 
 **declared responsibility boundaries.**
 
@@ -118,9 +142,9 @@ These certificates can later be referenced during:
 
 SILENT operates with a deliberately minimal flow.
 
-1. A capture is manually triggered
-2. A scope definition is provided
-3. A certificate is generated and stored
+1. A capture is manually triggered  
+2. A scope definition is provided  
+3. A certificate is generated and stored  
 
 Each certificate is independent.
 
@@ -131,7 +155,7 @@ There are:
 - no automated decisions
 - no external system dependencies
 
-SILENT simply records the **declared observation boundary at that moment in time.**
+SILENT records the **declared observation boundary at that moment in time.**
 
 ---
 
@@ -158,10 +182,130 @@ SILENT simply records the **declared observation boundary at that moment in time
 }
 ```
 
+This certificate records what the system declared it was responsible for observing at that moment.
+
+---
+
+# Quick Start
+
+`python tools\gen_keys.py` is required only once per machine.
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -U pip
+python -m pip install pynacl
+
+python tools\gen_keys.py
+python silent.py --sign
+python tools\verify_signature.py
+```
+
+---
+
+# What SILENT Is Not
+
+SILENT intentionally does **not**:
+
+- detect vulnerabilities
+- assess risk
+- judge security posture
+- evaluate compliance
+- recommend actions
+- apply fixes
+- monitor continuously
+- generate alerts
+- score environments
+
+SILENT is **not**:
+
+- a monitoring system
+- a security scanner
+- an observability platform
+- a compliance dashboard
+- a decision engine
+
+If SILENT begins performing any of these functions,  
+it is no longer SILENT.
+
+---
+
+# Intended Integration
+
+SILENT is designed to sit upstream of:
+
+- incident response
+- audit documentation
+- governance workflows
+- change reviews
+
+Certificates may be attached to:
+
+- incident tickets
+- audit evidence packages
+- post-incident reviews
+- security investigation reports
+
+SILENT does not enforce policy or perform remediation.
+
+Execution remains outside SILENT.
+
+---
+
+# Optional Signing
+
+SILENT supports optional **Ed25519 detached signatures** for certificates.
+
+Signing provides **tamper evidence only**.
+
+It does not:
+
+- validate correctness
+- represent approval
+- guarantee security
+
+It simply confirms that the certificate has not been modified after issuance.
+
 ---
 
 ## Documentation
 
-- [Philosophy](./PHILOSOPHY.md)
-- [Specification](./SPEC.md)
+Additional documentation is available:
+
 - [Architecture](./ARCHITECTURE.md)
+- [Specification](./SPEC.md)
+- [Philosophy](./PHILOSOPHY.md)
+
+---
+
+# Design Principles
+
+### Prepared Silence
+
+SILENT prepares to say nothing until something happens.
+
+---
+
+### Non-Binding
+
+A SILENT certificate records a declaration.  
+It does not approve, validate, or guarantee anything.
+
+---
+
+### Scope, Not Reality
+
+SILENT records what a system **claimed it was responsible for observing**,  
+not what actually happened.
+
+---
+
+### Minimal Surface
+
+SILENT intentionally minimizes functionality to reduce interpretation and unintended responsibility.
+
+---
+
+### Founder Independent
+
+SILENT must remain understandable without its creator.
