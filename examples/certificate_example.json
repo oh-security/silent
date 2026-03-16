@@ -1,0 +1,40 @@
+{
+  "silent_certificate_version": "1.0",
+  "certificate_id": "sc_20260125T123137Z_example",
+  "created_at_utc": "2026-01-25T12:31:37Z",
+
+  "created_by": {
+    "actor_type": "human"
+  },
+
+  "trigger": {
+    "trigger_type": "manual"
+  },
+
+  "scope": {
+    "provider": "aws",
+    "domain": "iam",
+    "region": "global",
+
+    "resources_included": [
+      "iam:users",
+      "iam:roles",
+      "iam:policies"
+    ],
+
+    "resources_excluded": [
+      "secrets",
+      "payloads",
+      "content_bodies"
+    ]
+  },
+
+  "collection": {
+    "read_only": true
+  },
+
+  "asset": {
+    "asset_id": "example-asset-001",
+    "inventory_url": "https://inventory.example.org/assets/example-asset-001"
+  }
+}
