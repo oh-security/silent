@@ -312,6 +312,6 @@ SILENT must remain understandable without its creator.
 
 ---
 
-A full certificate example is available in:
+### A full certificate example is available in:
 
 `examples/certificate_example.json`
