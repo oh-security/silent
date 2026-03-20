@@ -1,4 +1,16 @@
-# SILENT Certificate Specification
+# SILENT Responsibility Boundary Certificate Specification
+
+Version 0.1
+
+SILENT defines a minimal specification for recording declared responsibility boundaries.
+
+SILENT records what a system declared it was responsible for observing at a specific moment in time.
+
+It proves scope, not reality.
+
+---
+
+# SILENT Certificate Structure
 
 SILENT certificates record a declared responsibility boundary.
 
@@ -20,19 +32,18 @@ UTC timestamp of certificate generation.
 
 Defines the declared observation boundary.
 
-Example:
+Example fields:
 
 - scope.provider
 - scope.domain
 - scope.resources_included
 - scope.resources_excluded
 
-
 ---
 
 ## Design Principles
 
-Certificates must be:
+Certificates MUST be:
 
 - immutable
 - self-contained
@@ -45,7 +56,7 @@ Certificates describe what a system **declared**, not what actually occurred.
 
 ## Optional Signing
 
-Certificates may include an optional Ed25519 detached signature.
+Certificates MAY include an optional Ed25519 detached signature.
 
 The signature provides tamper evidence only.
 
