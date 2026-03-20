@@ -3,6 +3,7 @@
 **Keep the line of responsibility.**
 
 Responsibility boundary certificates for systems.
+
 SILENT defines a minimal specification for recording declared responsibility boundaries.
 
 SILENT records what a system **declared it was responsible for observing** at a specific moment in time.
