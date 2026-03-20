@@ -118,16 +118,16 @@ SILENT preserves that declared boundary when it was stated so the answer cannot 
 flowchart TD
 
 A[System declares what it is responsible for observing]
-A --> B[Responsibility boundary]
+A --> B[Declared responsibility boundary]
 B --> C[SILENT records the boundary]
 C --> D[Immutable certificate]
 
-D --> E[Later incident / audit]
-E --> F[What was the system responsible for at that time?]
+D --> E[Later incident or audit]
+E --> F[What did the system say it was responsible for observing at that time?]
 
-E --> G[Logs → what happened]
-E --> H[Configuration history → what existed]
-E --> I[SILENT → responsibility boundary]
+E --> G[Logs: what happened]
+E --> H[Configuration history: what existed]
+E --> I[SILENT: declared responsibility boundary]
 
 classDef silent fill:#f6f6f6,stroke:#333,stroke-width:2px;
 class C,D,I silent;
