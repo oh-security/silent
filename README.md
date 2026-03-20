@@ -8,8 +8,8 @@ SILENT defines a minimal specification for recording declared responsibility bou
 
 SILENT records what a system **declared it was responsible for observing** at a specific moment in time.
 
-Logs record events.  
-Configuration history records system state.
+Logs record what happened.  
+Configuration history records what existed.
 
 **SILENT records responsibility boundaries.**
 
@@ -67,6 +67,26 @@ Common scenarios include:
 SILENT does not determine whether the declaration was correct.
 
 It records that the declaration existed.
+
+---
+
+# Why Existing Records Are Not Enough
+
+Incident investigations often ask a simple question:
+
+What did the system claim it was responsible for observing at that time?
+
+Existing records provide different information:
+
+- Logs record what happened.
+- Configuration history records system state.
+- Monitoring systems record signals.
+
+However, none of these records preserve the **declared observation responsibility** of the system itself.
+
+SILENT records that declaration as an immutable certificate.
+
+SILENT records that declaration as an immutable certificate at the time it was made.
 
 ---
 
@@ -158,6 +178,21 @@ These certificates can later be referenced during:
 - incident investigations
 - audit reviews
 - compliance evidence collection
+
+---
+
+# Who Should Implement SILENT
+
+SILENT is intended to be implemented by systems that declare observation responsibility boundaries.
+
+Typical implementers may include:
+
+- cloud security platforms
+- monitoring and detection systems
+- governance and compliance tools
+- managed security service platforms
+
+These systems may issue SILENT certificates to record what they declared they were responsible for observing at a specific moment in time.
 
 ---
 
@@ -296,8 +331,8 @@ It simply confirms that the certificate has not been modified after issuance.
 Additional documentation is available:
 
 - [Specification](./spec/silent-spec.md)
-- [Certificate Data Model](./spec/certificate-model.md)
 - [Architecture](./ARCHITECTURE.md)
+- [Certificate Data Model](./spec/certificate-model.md)
 - [Philosophy](./PHILOSOPHY.md)
 
 ---
