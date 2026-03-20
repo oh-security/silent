@@ -2,11 +2,13 @@
 
 This document describes the minimal data model for a SILENT certificate.
 
-## Core fields
+## Core Fields
 
-- silent_certificate_version
-- created_at_utc
-- scope
+A SILENT certificate MUST include the following fields:
+
+- `silent_certificate_version`
+- `created_at_utc`
+- `scope`
 
 ## Example
 
@@ -31,4 +33,14 @@ This document describes the minimal data model for a SILENT certificate.
 }
 ```
 
+---
+
+## Interpretation
+
 A SILENT certificate records the declared responsibility boundary at the time of issuance.
+
+It describes what a system stated it was responsible for observing.
+
+A certificate does not validate correctness, completeness, or real system behavior.
+
+---
