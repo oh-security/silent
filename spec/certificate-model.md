@@ -28,6 +28,7 @@ This document describes the minimal data model for a SILENT certificate.
       "content_bodies"
     ]
   }
-}```
+}
+```
 
 A SILENT certificate records the declared responsibility boundary at the time of issuance.
