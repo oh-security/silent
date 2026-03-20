@@ -336,3 +336,18 @@ SILENT must remain understandable without its creator.
 ### A full certificate example is available in:
 
 `examples/certificate_example.json`
+
+---
+
+## Final Note
+
+SILENT does not replace existing security tools.
+
+Logs record what happened.  
+Configuration history records what existed.
+
+SILENT records something different:
+
+**the declared responsibility boundary of a system.**
+
+This boundary does not change later.
