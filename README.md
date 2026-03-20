@@ -295,8 +295,9 @@ It simply confirms that the certificate has not been modified after issuance.
 
 Additional documentation is available:
 
+- [Specification](./spec/silent-spec.md)
+- [Certificate Data Model](./spec/certificate-model.md)
 - [Architecture](./ARCHITECTURE.md)
-- [Specification](./SPEC.md)
 - [Philosophy](./PHILOSOPHY.md)
 
 ---
