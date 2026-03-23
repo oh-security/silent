@@ -86,7 +86,7 @@ However, none of these records preserve the **declared observation responsibilit
 
 SILENT records that declaration as an immutable certificate.
 
-SILENT records that declaration as an immutable certificate at the time it was made.
+preserving the responsibility boundary that existed at that moment.
 
 ---
 
