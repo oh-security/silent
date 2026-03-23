@@ -334,6 +334,7 @@ Additional documentation is available:
 - [Architecture](./ARCHITECTURE.md)
 - [Certificate Data Model](./spec/certificate-model.md)
 - [Philosophy](./PHILOSOPHY.md)
+- [Context](./CONTEXT.md)
 
 ---
 
