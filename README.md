@@ -87,6 +87,9 @@ However, none of these records preserve the **declared observation responsibilit
 SILENT records that declaration as an immutable certificate,
 preserving the responsibility boundary that existed at that moment.
 
+SILENT fixes the declared responsibility boundary at the time it was stated,
+so the scope of responsibility cannot expand later during incident or audit investigations.
+
 ---
 
 # Example
