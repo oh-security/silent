@@ -390,3 +390,13 @@ SILENT records something different:
 **the declared responsibility boundary of a system.**
 
 This boundary does not change later.
+
+---
+
+## Background Article
+
+For a conceptual explanation of the idea behind SILENT:
+
+**The Missing Record in Security Systems**  
+[https://medium.com/YOUR_ARTICLE_URL
+](https://silent-security.medium.com/the-missing-record-in-security-systems-2845cf3a61be)
