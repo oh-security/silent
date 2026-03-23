@@ -84,8 +84,7 @@ Existing records provide different information:
 
 However, none of these records preserve the **declared observation responsibility** of the system itself.
 
-SILENT records that declaration as an immutable certificate.
-
+SILENT records that declaration as an immutable certificate,
 preserving the responsibility boundary that existed at that moment.
 
 ---
