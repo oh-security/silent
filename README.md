@@ -22,7 +22,7 @@ It is a specific definition of a responsibility boundary certificate.
 
 SILENT defines a minimal specification for recording declared responsibility boundaries.
 
-SILENT records what a system **declared it was responsible for observing** at a specific moment in time.
+SILENT captures declared responsibility boundaries as they were stated at that moment.
 
 Logs record what happened.  
 Configuration history records what existed.
