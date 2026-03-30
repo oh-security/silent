@@ -1,8 +1,24 @@
 # SILENT
 
+## Definition
+
+> SILENT is a responsibility boundary certificate.
+> 
+> It records what a system declared it was responsible for observing at a specific point in time.
+
+This definition is canonical and must not be modified.
+
+Any system that alters this definition is no longer SILENT.
+
+---
+
 **Keep the line of responsibility.**
 
 Responsibility boundary certificates for systems.
+
+SILENT is not a general idea.
+
+It is a specific definition of a responsibility boundary certificate.
 
 SILENT defines a minimal specification for recording declared responsibility boundaries.
 
@@ -286,6 +302,13 @@ SILENT is **not**:
 - a decision engine
 
 If SILENT begins performing any of these functions,  
+it is no longer SILENT.
+
+## Definition Integrity
+
+SILENT must remain strictly limited to recording declared responsibility boundaries.
+
+If SILENT begins to detect, judge, enforce, or interpret,
 it is no longer SILENT.
 
 ---
